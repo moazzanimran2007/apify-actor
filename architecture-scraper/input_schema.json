@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Architecture Scraper Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "propertyUrls": {
+      "title": "Property URLs",
+      "type": "array",
+      "description": "Array of property detail page URLs (from RealEstateScraper output)",
+      "editor": "urlList",
+      "prefill": []
+    },
+    "realEstateDatasetId": {
+      "title": "Real Estate Dataset ID",
+      "type": "string",
+      "description": "Optional: Apify Dataset ID from RealEstateScraper actor run (for Actor-to-Actor integration)",
+      "default": ""
+    },
+    "maxRequestsPerCrawl": {
+      "title": "Max Requests Per Crawl",
+      "type": "integer",
+      "description": "Maximum number of pages to crawl",
+      "default": 50,
+      "minimum": 1,
+      "maximum": 1000
+    },
+    "proxyConfiguration": {
+      "title": "Proxy Configuration",
+      "type": "object",
+      "description": "Proxy configuration for residential proxies",
+      "default": {
+        "useApifyProxy": true,
+        "apifyProxyGroups": ["RESIDENTIAL"]
+      }
+    },
+    "maxConcurrency": {
+      "title": "Max Concurrency",
+      "type": "integer",
+      "description": "Maximum number of concurrent requests",
+      "default": 3,
+      "minimum": 1,
+      "maximum": 10
+    },
+    "requestDelay": {
+      "title": "Request Delay (seconds)",
+      "type": "number",
+      "description": "Delay between requests in seconds",
+      "default": 4,
+      "minimum": 2,
+      "maximum": 10
+    },
+    "generateSuggestions": {
+      "title": "Generate Architect Suggestions",
+      "type": "boolean",
+      "description": "Whether to generate layout and facade suggestions",
+      "default": true
+    }
+  },
+  "required": []
+}
+

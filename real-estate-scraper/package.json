@@ -1,0 +1,30 @@
+{
+  "name": "real-estate-scraper",
+  "version": "1.0.0",
+  "description": "Apify Actor for scraping comprehensive real estate data from Zillow, Redfin, and Realtor.com",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "apify": "^3.0.0",
+    "crawlee": "^3.0.0",
+    "playwright": "^1.40.0",
+    "playwright-extra": "^4.3.6",
+    "playwright-extra-plugin-stealth": "^2.11.2",
+    "cheerio": "^1.0.0-rc.12"
+  },
+  "keywords": [
+    "apify",
+    "actor",
+    "real-estate",
+    "scraper",
+    "zillow",
+    "redfin"
+  ],
+  "author": "",
+  "license": "ISC"
+}
+
