@@ -1,0 +1,15 @@
+{
+  "name": "linkedin-agent-dashboard",
+  "version": "1.0.0",
+  "description": "Control panel for the Prdikt LinkedIn agent - switch AI providers/models, toggle review mode, trigger runs, view post history",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.0"
+  },
+  "license": "ISC"
+}

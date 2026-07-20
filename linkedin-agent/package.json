@@ -1,0 +1,26 @@
+{
+  "name": "linkedin-agent",
+  "version": "1.0.0",
+  "description": "Apify Actor that researches AI/PM news with Claude and publishes a LinkedIn post in Prdikt founder voice on a schedule",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "apify": "^3.0.0",
+    "@anthropic-ai/sdk": ">=0.110.0 <1.0.0",
+    "openai": "^6.0.0",
+    "@google/genai": "^1.0.0"
+  },
+  "keywords": [
+    "apify",
+    "actor",
+    "linkedin",
+    "claude",
+    "prdikt",
+    "ghostwriter"
+  ],
+  "author": "",
+  "license": "ISC"
+}

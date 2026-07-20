@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Prdikt LinkedIn Agent Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "provider": {
+      "title": "Model provider",
+      "type": "string",
+      "description": "Which AI provider to use. Leave empty to use the value saved from the dashboard (falls back to Anthropic). Requires the matching API key env var: ANTHROPIC_API_KEY, OPENAI_API_KEY, or GEMINI_API_KEY.",
+      "editor": "select",
+      "enum": ["anthropic", "openai", "gemini"],
+      "enumTitles": ["Anthropic (Claude)", "OpenAI (GPT)", "Google (Gemini)"]
+    },
+    "reviewMode": {
+      "title": "Review mode",
+      "type": "boolean",
+      "description": "If true, the agent writes the post and stops WITHOUT publishing to LinkedIn. Leave unset to use the dashboard-saved value (falls back to true — safe by default).",
+      "nullable": true
+    },
+    "model": {
+      "title": "Model ID",
+      "type": "string",
+      "description": "Model ID for the selected provider (e.g. claude-opus-4-8, gpt-5, gemini-2.5-pro). Leave empty to use the dashboard-saved value or the provider default.",
+      "editor": "textfield"
+    },
+    "maxWebSearches": {
+      "title": "Max web searches",
+      "type": "integer",
+      "description": "Upper bound on web search tool calls per run (cost control; applies to the Anthropic provider). Leave unset for the dashboard-saved value or 8.",
+      "minimum": 1,
+      "maximum": 20,
+      "nullable": true
+    },
+    "maxWebFetches": {
+      "title": "Max web fetches",
+      "type": "integer",
+      "description": "Upper bound on web fetch tool calls per run (applies to the Anthropic provider). Leave unset for the dashboard-saved value or 6.",
+      "minimum": 1,
+      "maximum": 20,
+      "nullable": true
+    }
+  }
+}
